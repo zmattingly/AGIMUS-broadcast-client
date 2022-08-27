@@ -1,0 +1,14 @@
+{
+  "host": {
+    "host_address": "",
+    "host_port": "7890"
+  },
+  "hue": {
+    "bridge_ip": "",
+    "username": "",
+    "target_light_name": ""
+  },
+  "nanoleaf": {
+    "device_ip": ""
+  }
+}
