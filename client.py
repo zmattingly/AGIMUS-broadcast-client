@@ -234,7 +234,7 @@ async def listen():
   async with websockets.connect(url, ping_timeout=None) as ws:
     while True:
       msg = await ws.recv()
-      formatted_msg = msg[1:-1].encode('utf-8').decode('unicode-escape')
+      formatted_msg = msg[1:-1].encode('raw_unicode_escape').decode('unicode-escape').encode('utf-16_BE','surrogatepass').decode('utf-16_BE')
       try:
         logger.info("%s", formatted_msg)
       except Exception as e:
